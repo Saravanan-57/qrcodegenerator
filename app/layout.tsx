@@ -1,27 +1,20 @@
-import type { Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
-import './globals.css'
+import { Inter } from 'next/font/google'
 
-export const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-export const metadata: Metadata = {
-  title: 'QR code app',
-  description: 'Generated for converting text to QR Code',
+export const metadata = {
+  title: 'Your App',
+  description: 'Your App Description',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${fontSans.variable} ${fontSans.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={inter.variable}>
+      <body>{children}</body>
     </html>
   )
 }
