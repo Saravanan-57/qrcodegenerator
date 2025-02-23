@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-
+import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body className="animated-gradient">{children}</body>
     </html>
   )
 }

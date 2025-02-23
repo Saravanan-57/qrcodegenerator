@@ -28,11 +28,15 @@ function QrCodeForm() {
         placeholder="Enter text or URL"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="border p-2 rounded w-64 text-center"
+        className="border p-2 rounded-2xl w-64 text-center"
       />
       {text && (
         <div className="mt-4" ref={qrRef}>
-          <QRCodeCanvas value={text} size={200} />
+          <QRCodeCanvas
+            value={text}
+            size={200}
+            className="border-8 border-[#ee9ca7] outline-offset-4  rounded-md"
+          />
         </div>
       )}
       {text && (
